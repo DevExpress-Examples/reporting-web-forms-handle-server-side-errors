@@ -104,7 +104,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomException.cs" />
+    <Compile Include="CustomInvalidRangeException.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,9 +129,6 @@
     <Compile Include="Reports\XtraReport3.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\XtraReport3.Designer.cs">
-      <DependentUpon>XtraReport3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\XtraReport2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -152,16 +149,9 @@
       <DependentUpon>Viewer.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Reports\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraReport2.resx">
-      <DependentUpon>XtraReport2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraReport3.resx">
-      <DependentUpon>XtraReport3.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

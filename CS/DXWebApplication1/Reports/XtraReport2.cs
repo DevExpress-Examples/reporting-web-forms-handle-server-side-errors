@@ -1,9 +1,6 @@
 ﻿using System;
 using DevExpress.XtraReports.UI;
 
-/// <summary>
-/// Summary description for XtraReport2
-/// </summary>
 public class XtraReport2 : XtraReport {
 	private TopMarginBand TopMargin;
 	private BottomMarginBand BottomMargin;
