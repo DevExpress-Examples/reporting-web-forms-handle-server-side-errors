@@ -4,7 +4,6 @@
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
     <script type="text/javascript">
-        var timeOut;
         function openReport(report) {
             webDocumentViewer.OpenReport(report);
         }

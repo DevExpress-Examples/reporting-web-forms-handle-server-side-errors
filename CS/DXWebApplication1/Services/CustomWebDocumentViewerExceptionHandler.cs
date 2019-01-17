@@ -15,18 +15,18 @@ namespace DXWebApplication1.Services {
         }
 
         public override string GetFaultExceptionMessage(FaultException faultException) {
-            return $"FaultException occurred: {faultException.Message}.";
+            return "FaultException occurred: " + faultException.Message + ".";
         }
 
         public override string GetUnknownExceptionMessage(Exception ex) {
             if (ex is FileNotFoundException) {
 #if DEBUG
-                return $"Debug mode. {ex.Message}.";
+                return "Debug mode. " + ex.Message + ".";
 #else
                 return "File is not found.";
 #endif
             }
-            return $"{ex.GetType().Name} occurred. See the log file for more details.";
+            return ex.GetType().Name + " occurred. See the log file for more details.";
         }
     }
 }
