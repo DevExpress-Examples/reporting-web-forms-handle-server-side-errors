@@ -28,3 +28,7 @@ The following table lists errors from this example and methods used to process t
 **Note**
 
 This examples targets the ASP.NET WebForms platform, but you can use the shown exception handler implementations in ASP.NET MVC applications. 
+
+**See also**
+
+[How to handle server-side errors in ASP.NET Core reporting controls](https://github.com/DevExpress-Examples/how-to-handle-server-side-errors-in-asp.net-core-reporting-controls)
