@@ -3,9 +3,9 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T830433)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# How to handle server-side errors in web reporting controls
+# Reporting for ASP.NET WebForms - How to Handle Server-Side Errors
 
-This example demonstrates how to process errors that occur on web reporting controls' server side.
+This example demonstrates how to process errors that occur on web reporting controls' server side. This example targets the ASP.NET WebForms platform, but you can use the shown exception handler implementations in ASP.NET MVC applications. 
 
 * The [ReportDesignerExceptionHandler](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.ReportDesigner.Services.ReportDesignerExceptionHandler) class is used for the [End-User Report Designer](https://docs.devexpress.com/XtraReports/17103/create-end-user-reporting-applications/web-reporting/asp-net-webforms-reporting/end-user-report-designer) control.
 * The [WebDocumentViewerExceptionHandler](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerExceptionHandler) class is used for the separate [Web Document Viewer](https://docs.devexpress.com/XtraReports/17738/create-end-user-reporting-applications/web-reporting/asp-net-webforms-reporting/document-viewer/html5-document-viewer) control and the Report Designer's built-in Document Viewer.
@@ -15,6 +15,8 @@ These classes expose the following methods:
 * [GetDocumentCreationExceptionMessage](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerExceptionHandler.GetDocumentCreationExceptionMessage(DocumentCreationException)) to handle errors related to the document creation process;
 * [GetFaultExceptionMessage](http://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.ClientControls.ExceptionHandler.GetFaultExceptionMessage(System.ServiceModel.FaultException)) to handle [FaultException](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.faultexception);
 * [GetUnknownExceptionMessage](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.ClientControls.ExceptionHandler.GetUnknownExceptionMessage(System.Exception)) to handle other unknown exceptions, for which reporting controls show the standard 'Internal Server Error' message.
+
+## Implementation Details
 
 This example contains several report layouts and emulates exceptions that can be raised when you work with reporting controls. 
 
@@ -29,11 +31,6 @@ The following table lists errors from this example and methods used to process t
 | Invalid Report URL (Designer) | [FaultException](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.faultexception) | [GetFaultExceptionMessage](http://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.ClientControls.ExceptionHandler.GetFaultExceptionMessage(System.ServiceModel.FaultException))
 | Custom Document Operation (Viewer) | [FaultException](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.faultexception) | [GetFaultExceptionMessage](http://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.ClientControls.ExceptionHandler.GetFaultExceptionMessage(System.ServiceModel.FaultException))
 
+## More Examples:
 
-**Note**
-
-This examples targets the ASP.NET WebForms platform, but you can use the shown exception handler implementations in ASP.NET MVC applications. 
-
-**See also**
-
-[How to handle server-side errors in ASP.NET Core reporting controls](https://github.com/DevExpress-Examples/how-to-handle-server-side-errors-in-asp.net-core-reporting-controls)
+* [How to handle server-side errors in ASP.NET Core reporting controls](https://github.com/DevExpress-Examples/how-to-handle-server-side-errors-in-asp.net-core-reporting-controls)
