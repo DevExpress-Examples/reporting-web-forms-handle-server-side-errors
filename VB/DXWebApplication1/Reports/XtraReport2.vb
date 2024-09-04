@@ -71,7 +71,7 @@ Public Class XtraReport2
 		' XtraReport2
 		' 
 		Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.TopMargin, Me.BottomMargin, Me.Detail})
-		Me.Font = New System.Drawing.Font("Arial", 9.75F)
+		Me.Font = New DevExpress.Drawing.DXFont("Arial", 9.75F)
 		Me.Version = "18.2"
 		DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
 

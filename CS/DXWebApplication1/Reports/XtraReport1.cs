@@ -124,7 +124,7 @@ public class XtraReport1 : XtraReport {
             this.TopMargin,
             this.BottomMargin,
             this.Detail});
-        this.Font = new System.Drawing.Font("Arial", 9.75F);
+        this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
         this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.StartDate,
             this.EndDate});
