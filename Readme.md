@@ -36,7 +36,7 @@ The following table lists errors from this example and methods used to process t
 
 * [How to handle server-side errors in ASP.NET Core reporting controls](https://github.com/DevExpress-Examples/how-to-handle-server-side-errors-in-asp.net-core-reporting-controls)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=reporting-web-forms-handle-server-side-errors&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=reporting-web-forms-handle-server-side-errors&~~~was_helpful=no)
 
