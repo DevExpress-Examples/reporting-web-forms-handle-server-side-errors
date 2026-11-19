@@ -6,6 +6,7 @@ using DevExpress.XtraReports.Web.ClientControls;
 using DevExpress.XtraReports.Web.ReportDesigner.Services;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
 using DXWebApplication1.Services;
+using Microsoft.Extensions.Logging;
 
 namespace DXWebApplication1 {
     public class Global_asax : System.Web.HttpApplication {
@@ -20,9 +21,7 @@ namespace DXWebApplication1 {
             DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.Register<IReportDesignerExceptionHandler, CustomReportDesignerExceptionHandler>();
             ASPxReportDesigner.StaticInitialize();
 
-            LoggerService.Initialize((exception, message) => {
-                System.Diagnostics.Trace.TraceError("[{0}]: Exception occurred. Message: '{1}'. Exception Details:\r\n{2}", DateTime.Now, message, exception);
-            });
+            LoggerService.SetLoggerFactory(LoggerFactory.Create(builder => builder.AddDebug()));
             
             DevExpress.Web.ASPxWebControl.CallbackError += new EventHandler(Application_Error);
         }
