@@ -6,6 +6,7 @@ Imports DevExpress.XtraReports.Web.ClientControls
 Imports DevExpress.XtraReports.Web.ReportDesigner.Services
 Imports DevExpress.XtraReports.Web.WebDocumentViewer
 Imports DXWebApplication1.Services
+Imports Microsoft.Extensions.Logging
 
 Namespace DXWebApplication1
 	Public Class Global_asax
@@ -22,7 +23,7 @@ Namespace DXWebApplication1
 			DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.Register(Of IReportDesignerExceptionHandler, CustomReportDesignerExceptionHandler)()
 			ASPxReportDesigner.StaticInitialize()
 
-			LoggerService.Initialize(Sub(exception, message) System.Diagnostics.Trace.TraceError("[{0}]: Exception occurred. Message: '{1}'. Exception Details:" & ControlChars.CrLf & "{2}", Date.Now, message, exception))
+			LoggerService.SetLoggerFactory(LoggerFactory.Create(Sub(builder) builder.AddDebug()))
 
 			AddHandler DevExpress.Web.ASPxWebControl.CallbackError, AddressOf Application_Error
 		End Sub
